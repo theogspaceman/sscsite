@@ -1,2 +1,33 @@
 [build]
   publish = "site"
+
+# The site used to be four pages; send old links to the matching section
+[[redirects]]
+  from = "/capabilities"
+  to = "/#capabilities"
+  status = 301
+
+[[redirects]]
+  from = "/capabilities.html"
+  to = "/#capabilities"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/#about"
+  status = 301
+
+[[redirects]]
+  from = "/about.html"
+  to = "/#about"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/#contact"
+  status = 301
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/#contact"
+  status = 301

@@ -1,58 +1,284 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Superior Solutions Consulting</title>
 <meta name="description" content="Advisory and technical support services for government and commercial clients.">
+<meta name="theme-color" content="#08090b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Superior Solutions Consulting">
+<meta property="og:description" content="Advisory and technical support services for government and commercial clients.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400;0,8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Inter+Tight:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
+<!-- Icon set: Lucide (ISC license), https://lucide.dev -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></symbol>
+  <symbol id="i-trending" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+  <symbol id="i-network" viewBox="0 0 24 24"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+  <symbol id="i-file-check" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m9 15 2 2 4-4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+</svg>
+
 <header class="site-header">
-  <div class="wrap">
-    <a class="wordmark" href="index.html">Superior Solutions Consulting</a>
-    <nav>
-      <a href="capabilities.html">Capabilities</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Superior Solutions Consulting — back to top">
+      <img src="Assets/ss-mark.png" alt="" width="607" height="321">
+      <span class="brand-name">Superior Solutions</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Menu</span><span class="bar"></span><span class="bar"></span>
+    </button>
+    <nav id="site-nav" class="site-nav">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn btn-small" href="#contact">Get in touch</a>
     </nav>
   </div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <h1>Advisory and technical support for government and commercial clients.</h1>
-    <p class="lede">Superior Solutions Consulting supports organizations across the full contract lifecycle — from logistics and sourcing execution through business development, acquisition, and program support.</p>
-    <a class="cta" href="contact.html">Get in touch</a>
+<main>
+
+<!-- Hero -->
+<section id="top" class="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-grid hero-grid-lit" aria-hidden="true"></div>
+  <div class="hero-spot" aria-hidden="true"></div>
+  <div class="wrap hero-inner">
+    <div class="hero-logo-wrap reveal">
+      <img class="hero-logo" src="Assets/ss-logo-lockup.png" alt="Superior Solutions Consulting" width="1046" height="512">
+    </div>
+    <h1 class="split">Advisory and technical support for government and commercial clients.</h1>
+    <p class="lede reveal" style="--d: 5">Superior Solutions Consulting supports organizations across the full contract lifecycle — from logistics and sourcing execution through business development, acquisition, and program support.</p>
+    <div class="hero-actions reveal" style="--d: 6">
+      <a class="btn" href="#contact">Get in touch <svg class="icon"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="#capabilities">What we do</a>
+    </div>
   </div>
+  <span class="thread-start" aria-hidden="true" data-thread-start></span>
 </section>
 
-<section>
+<!-- Service ticker -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Supply Chain &amp; Logistics</span><i></i>
+    <span class="dim">Program &amp; Project Management</span><i></i>
+    <span>Sourcing &amp; Vendor Management</span><i></i>
+    <span class="dim">Business Development &amp; Capture</span><i></i>
+    <span>Acquisition Support</span><i></i>
+    <span class="dim">Program Support Services</span><i></i>
+    <span>Supply Chain &amp; Logistics</span><i></i>
+    <span class="dim">Program &amp; Project Management</span><i></i>
+    <span>Sourcing &amp; Vendor Management</span><i></i>
+    <span class="dim">Business Development &amp; Capture</span><i></i>
+    <span>Acquisition Support</span><i></i>
+    <span class="dim">Program Support Services</span><i></i>
+  </div>
+</div>
+
+<!-- Capabilities -->
+<section id="capabilities" class="section section-caps">
   <div class="wrap">
-    <h2 class="section-title">What we do</h2>
-    <p class="section-intro">Two areas of focus, each built around a different part of the contract lifecycle.</p>
-    <div class="capability-grid">
-      <a class="silo-card" href="capabilities.html#logistics">
-        <h3>Logistics, Management &amp; Sourcing</h3>
-        <p>Execution-focused support for programs and supply chains.</p>
+    <div class="section-head reveal">
+      <p class="eyebrow" data-node><span>01</span> Capabilities</p>
+      <h2>What we do</h2>
+      <p class="section-intro">Advisory and technical support across the full contract lifecycle — from sourcing and execution through business development and acquisition support.</p>
+      <p class="section-intro muted">Two areas of focus, each built around a different part of the contract lifecycle.</p>
+    </div>
+
+    <div class="silo-index">
+      <a class="silo-link spot reveal" href="#logistics">
+        <svg class="icon icon-lg"><use href="#i-route"/></svg>
+        <span><strong>Logistics, Management &amp; Sourcing</strong><em>Execution-focused support for programs and supply chains.</em></span>
+        <svg class="icon arrow"><use href="#i-arrow"/></svg>
       </a>
-      <a class="silo-card" href="capabilities.html#acquisition">
-        <h3>Sales, Acquisition &amp; Program Support</h3>
-        <p>Growth-focused support for capture, acquisition, and program execution.</p>
+      <a class="silo-link spot reveal" href="#acquisition" style="--d: 1">
+        <svg class="icon icon-lg"><use href="#i-trending"/></svg>
+        <span><strong>Sales, Acquisition &amp; Program Support</strong><em>Growth-focused support for capture, acquisition, and program execution.</em></span>
+        <svg class="icon arrow"><use href="#i-arrow"/></svg>
       </a>
+    </div>
+
+    <div class="silo" id="logistics">
+      <div class="silo-head reveal">
+        <span class="silo-num" data-node>A</span>
+        <div>
+          <h3>Logistics, Management &amp; Sourcing</h3>
+          <p>Execution-focused support for programs and supply chains.</p>
+        </div>
+      </div>
+      <ul class="service-grid">
+        <li class="service spot reveal">
+          <span class="service-no">01</span>
+          <span class="service-icon"><svg class="icon"><use href="#i-truck"/></svg></span>
+          <h4>Supply Chain &amp; Logistics Management</h4>
+          <p>Planning, coordination, and oversight of complex supply chains and logistics operations to keep programs on schedule and within budget.</p>
+        </li>
+        <li class="service spot reveal" style="--d: 1">
+          <span class="service-no">02</span>
+          <span class="service-icon"><svg class="icon"><use href="#i-clipboard"/></svg></span>
+          <h4>Program &amp; Project Management Support</h4>
+          <p>Hands-on management support across the program lifecycle — planning, scheduling, risk management, and reporting.</p>
+        </li>
+        <li class="service spot reveal" style="--d: 2">
+          <span class="service-no">03</span>
+          <span class="service-icon"><svg class="icon"><use href="#i-network"/></svg></span>
+          <h4>Sourcing &amp; Vendor Management</h4>
+          <p>Identification, evaluation, and management of vendors and suppliers to ensure reliable, cost-effective sourcing.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="silo" id="acquisition">
+      <div class="silo-head reveal">
+        <span class="silo-num" data-node>B</span>
+        <div>
+          <h3>Sales, Acquisition &amp; Program Support</h3>
+          <p>Growth-focused support for capture, acquisition, and program execution.</p>
+        </div>
+      </div>
+      <ul class="service-grid">
+        <li class="service spot reveal">
+          <span class="service-no">04</span>
+          <span class="service-icon"><svg class="icon"><use href="#i-target"/></svg></span>
+          <h4>Business Development &amp; Capture Support</h4>
+          <p>Market research, opportunity identification, and capture strategy support to help organizations win new business.</p>
+        </li>
+        <li class="service spot reveal" style="--d: 1">
+          <span class="service-no">05</span>
+          <span class="service-icon"><svg class="icon"><use href="#i-file-check"/></svg></span>
+          <h4>Acquisition Support</h4>
+          <p>Support across the acquisition lifecycle — from pre-award proposal development through post-award contract administration.</p>
+        </li>
+        <li class="service spot reveal" style="--d: 2">
+          <span class="service-no">06</span>
+          <span class="service-icon"><svg class="icon"><use href="#i-layers"/></svg></span>
+          <h4>Program Support Services</h4>
+          <p>Cross-functional support services that help programs execute efficiently and meet stakeholder requirements.</p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
-<footer class="site-footer">
+<!-- About -->
+<section id="about" class="section section-alt">
+  <div class="wrap about-layout">
+    <div class="about-side">
+      <div class="section-head reveal">
+        <p class="eyebrow" data-node><span>02</span> Company</p>
+        <h2>About</h2>
+      </div>
+      <div class="emblem reveal" aria-hidden="true" data-node>
+        <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+        <img src="Assets/ss-mark.png" alt="" width="607" height="321">
+      </div>
+    </div>
+    <div class="about-body">
+      <p class="about-lead reveal">Superior Solutions Consulting was founded to provide advisory and technical support services across the full contract lifecycle — from logistics and sourcing execution through business development, acquisition, and program support. We work with organizations that need experienced, execution-focused support without the overhead of a large consultancy.</p>
+
+      <div class="experience reveal">
+        <h3 class="mini-head">Experience</h3>
+        <p>Superior Solutions Consulting was founded from experience in international defense business development, program management, project execution, and consultative sales. Our background includes managing opportunities from pursuit through execution, coordinating with government and commercial customers, and aligning partners around complex requirements. We bring practical experience in proposals, contracts, logistics, budgeting, vendor coordination, and international operations. That foundation enables Superior Solutions to identify opportunities, build partnerships, and move programs efficiently toward execution.</p>
+      </div>
+
+      <ul class="expertise">
+        <li class="reveal">Business development</li>
+        <li class="reveal" style="--d: 1">Program management</li>
+        <li class="reveal" style="--d: 2">Project execution</li>
+        <li class="reveal" style="--d: 3">Consultative sales</li>
+        <li class="reveal" style="--d: 4">Proposals &amp; contracts</li>
+        <li class="reveal" style="--d: 5">Logistics &amp; budgeting</li>
+        <li class="reveal" style="--d: 6">Vendor coordination</li>
+        <li class="reveal" style="--d: 7">International operations</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section section-contact">
   <div class="wrap">
-    <span>© 2026 Superior Solutions Consulting</span>
+    <div class="section-head reveal">
+      <p class="eyebrow" data-node><span>03</span> Get in touch</p>
+      <h2>Contact</h2>
+      <p class="section-intro">Interested in working together? Reach out below or send us a message directly.</p>
+    </div>
+
+    <div class="contact-layout">
+      <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden">
+          <label>Don't fill this out if you're human: <input name="bot-field"></label>
+        </p>
+
+        <div class="field-row">
+          <div class="field">
+            <input type="text" id="name" name="name" autocomplete="name" placeholder=" " required>
+            <label for="name">Name</label>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" autocomplete="email" placeholder=" " required>
+            <label for="email">Email</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <input type="text" id="company" name="company" autocomplete="organization" placeholder=" ">
+          <label for="company">Company (optional)</label>
+        </div>
+
+        <div class="field">
+          <textarea id="message" name="message" placeholder=" " required></textarea>
+          <label for="message">Message</label>
+        </div>
+
+        <button class="btn" type="submit" data-node>Send message <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </form>
+
+      <aside class="contact-direct spot reveal" style="--d: 1">
+        <span class="service-icon"><svg class="icon"><use href="#i-mail"/></svg></span>
+        <h3>Prefer email?</h3>
+        <a class="email-link" href="mailto:info@ssconsult.biz">info@ssconsult.biz</a>
+        <button class="copy-btn" type="button" data-copy="info@ssconsult.biz">
+          <svg class="icon"><use href="#i-copy"/></svg><span>Copy address</span>
+        </button>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <a class="footer-brand" href="#top" aria-label="Back to top">
+      <img class="footer-mark" src="Assets/ss-mark.png" alt="" width="607" height="321" data-thread-end>
+    </a>
+    <span class="footer-copy">© 2026 Superior Solutions Consulting</span>
+    <a class="footer-mail" href="mailto:info@ssconsult.biz">info@ssconsult.biz</a>
+    <a class="to-top" href="#top">Back to top <svg class="icon"><use href="#i-arrow-up"/></svg></a>
   </div>
 </footer>
 
+<script src="js/main.js" defer></script>
 </body>
 </html>
