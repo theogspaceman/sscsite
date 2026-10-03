@@ -252,7 +252,15 @@
         </div>
 
         <button class="btn" type="submit" data-node>Send message <svg class="icon"><use href="#i-arrow"/></svg></button>
+        <p class="form-error" role="alert" hidden>Something went wrong and your message wasn't sent. Please try again, or email <a href="mailto:info@ssconsult.biz">info@ssconsult.biz</a>.</p>
       </form>
+
+      <div class="form-success" tabindex="-1" hidden>
+        <span class="service-icon"><svg class="icon"><use href="#i-check"/></svg></span>
+        <h3 data-node>Message sent</h3>
+        <p>Thanks for reaching out. We'll get back to you soon.</p>
+        <button class="btn btn-ghost btn-small" type="button">Send another message</button>
+      </div>
 
       <aside class="contact-direct spot reveal" style="--d: 1">
         <span class="service-icon"><svg class="icon"><use href="#i-mail"/></svg></span>

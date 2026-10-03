@@ -64,6 +64,39 @@
     });
   });
 
+  /* ---------- Contact form: send in the background, confirm on the page ---------- */
+  var form = document.querySelector('.contact-form');
+  var success = document.querySelector('.form-success');
+  if (form && success && window.fetch) {
+    var submitBtn = form.querySelector('[type="submit"]');
+    var formError = form.querySelector('.form-error');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitBtn.disabled = true;
+      formError.hidden = true;
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error(res.status);
+        form.reset();
+        form.hidden = true;
+        success.hidden = false;
+        success.focus({ preventScroll: true });
+      }).catch(function () {
+        formError.hidden = false;
+      }).then(function () {
+        submitBtn.disabled = false;
+      });
+    });
+    success.querySelector('button').addEventListener('click', function () {
+      success.hidden = true;
+      form.hidden = false;
+      form.querySelector('input:not([type="hidden"])').focus();
+    });
+  }
+
   /* ---------- Pointer effects (desktop only) ---------- */
   if (finePointer && !reduceMotion) {
     var hero = document.querySelector('.hero');
@@ -177,6 +210,7 @@
     var pts = [{ x: s.x + s.w / 2, y: s.y }];
     var marks = [];
     targets.forEach(function (el) {
+      if (!el.offsetParent) return; // hidden (e.g. the form after it's sent)
       var b = pageBox(el);
       var p = { x: gx, y: b.y + b.h / 2 };
       pts.push(p);

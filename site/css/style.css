@@ -707,6 +707,22 @@ img { max-width: 100%; height: auto; display: block; }
   box-shadow: 0 0 0 4px rgba(214, 220, 230, .06);
 }
 .contact-form .btn { align-self: flex-start; margin-top: 6px; }
+.contact-form .btn[disabled] { opacity: .6; cursor: wait; }
+.form-error { margin: 0; color: var(--muted); font-size: 15px; border-left: 2px solid var(--silver); padding-left: 14px; }
+.form-error a { color: var(--text); }
+/* Shown in place of the form after a successful send */
+.contact-form[hidden], .form-success[hidden] { display: none; }
+.form-success {
+  padding: 48px 40px;
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  animation: success-in .6s var(--ease);
+}
+.form-success:focus { outline: none; }
+.form-success .service-icon { margin-bottom: 26px; }
+.form-success h3 { font-size: 28px; font-weight: 600; margin: 0 0 10px; }
+.form-success p { color: var(--muted); margin: 0 0 28px; }
+@keyframes success-in { from { opacity: 0; transform: translateY(12px); } }
 
 .contact-direct {
   padding: 38px 34px;
@@ -830,7 +846,7 @@ img { max-width: 100%; height: auto; display: block; }
   html { scroll-behavior: auto; }
   .js .reveal, .js .hero h1 .w { opacity: 1; transform: none; filter: none; transition: none; }
   .js .service.reveal .icon, .js .contact-direct.reveal .service-icon .icon { stroke-dashoffset: 0; transition: none; }
-  .hero-logo, .emblem { animation: none; }
+  .hero-logo, .emblem, .form-success { animation: none; }
   /* Keep the service ticker moving (slower) so every item stays visible */
   .ticker-track { animation-duration: 80s; }
 }
